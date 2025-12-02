@@ -125,6 +125,17 @@
         body {
           font-size: 16px;
           line-height: 1.6;
+          -webkit-text-size-adjust: 100%;
+        }
+        /* 提高移动端文字对比度 */
+        p, span, div {
+          color: rgba(41, 37, 36, 0.95);
+        }
+      }
+      /* 小屏幕优化 */
+      @media (max-width: 640px) {
+        body {
+          font-size: 15px;
         }
       }
       /* 移动端横向滚动优化 */
@@ -165,7 +176,7 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/H5_feiyi/assets/index-D7igj8Gi.js"></script>
+  <script type="module" crossorigin src="/H5_feiyi/assets/index-s1Skqcbu.js"></script>
 </head>
   <body>
     <div id="root"></div>
