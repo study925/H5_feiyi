@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>非遗扎染：千年染艺的传承与魅力</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              indigo: {
+                50: '#eef2ff',
+                100: '#e0e7ff',
+                200: '#c7d2fe',
+                300: '#a5b4fc',
+                400: '#818cf8',
+                500: '#6366f1',
+                600: '#4f46e5',
+                700: '#4338ca',
+                800: '#3730a3',
+                900: '#312e81',
+                950: '#1e1b4b',
+              },
+              stone: {
+                50: '#fafaf9',
+                100: '#f5f5f4',
+                200: '#e7e5e4',
+                300: '#d6d3d1',
+                400: '#a8a29e',
+                500: '#78716c',
+                600: '#57534e',
+                700: '#44403c',
+                800: '#292524',
+                900: '#1c1917',
+                950: '#0c0a09',
+              },
+              blue: {
+                50: '#eff6ff',
+                100: '#dbeafe',
+                200: '#bfdbfe',
+                300: '#93c5fd',
+                400: '#60a5fa',
+                500: '#3b82f6',
+                600: '#2563eb',
+                700: '#1d4ed8',
+                800: '#1e40af',
+                900: '#1e3a8a',
+                950: '#172554',
+              }
+            },
+            fontFamily: {
+              serif: ['"Noto Serif SC"', 'serif'],
+              sans: ['"Noto Sans SC"', 'sans-serif'],
+            },
+            backgroundImage: {
+              'paper-texture': "url(\"data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E\")",
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #fafaf9; /* stone-50 */
+        color: #292524; /* stone-800 */
+        -webkit-font-smoothing: antialiased;
+        font-family: "Noto Sans SC", sans-serif;
+        /* 移动端优化 */
+        -webkit-tap-highlight-color: transparent;
+        touch-action: pan-y;
+      }
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+        /* 移动端滚动优化 */
+        -webkit-overflow-scrolling: touch;
+      }
+      /* Custom scrollbar - 桌面端 */
+      @media (min-width: 768px) {
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #f5f5f4;
+          border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: linear-gradient(180deg, #6366f1 0%, #4f46e5 100%);
+          border-radius: 4px;
+          border: 1px solid #f5f5f4;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: linear-gradient(180deg, #4f46e5 0%, #4338ca 100%);
+        }
+      }
+      /* 移动端触摸优化 */
+      * {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      button, a {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+      }
+      /* 移动端字体渲染优化 */
+      @media (max-width: 768px) {
+        body {
+          font-size: 16px;
+          line-height: 1.6;
+        }
+      }
+      /* 移动端横向滚动优化 */
+      .overflow-x-auto {
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
+        overscroll-behavior-x: contain;
+      }
+      /* 防止图片拖拽 - 但允许触摸滚动 */
+      img {
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+      }
+      /* 滚动容器中的图片不阻止触摸 */
+      .overflow-x-auto img {
+        pointer-events: auto;
+        touch-action: pan-x;
+      }
+      /* 移动端滚动容器优化 */
+      @media (max-width: 768px) {
+        .overflow-x-auto {
+          scroll-snap-type: x mandatory;
+          scroll-padding: 0;
+        }
+      }
+    </style>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-4EEuUM5p.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+</body>
+</html>
